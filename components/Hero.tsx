@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import { withBasePath } from "@/lib/assets";
 import { createWhatsAppLink } from "@/lib/whatsapp";
 
 export default function Hero() {
@@ -11,7 +12,7 @@ export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-brand-navy text-white">
       <Image
-        src="/images/academy-hero.png"
+        src={withBasePath("/images/academy-hero.png")}
         alt="Children learning in a bright classroom at Iqra Angels Learning Academy"
         fill
         priority

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { HeartHandshake, ListChecks, MessageCircle, Sparkles, type LucideIcon } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import { benefits, galleryItems } from "@/lib/data";
+import { withBasePath } from "@/lib/assets";
 import { createWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-soft">
             <Image
-              src="/images/academy-hero.png"
+              src={withBasePath("/images/academy-hero.png")}
               alt="Bright classroom learning environment at Iqra Angels Learning Academy"
               fill
               sizes="(min-width: 1024px) 460px, 100vw"
@@ -95,7 +96,7 @@ export default function AboutPage() {
               <article key={item.id} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src={item.image}
+                    src={withBasePath(item.image)}
                     alt={item.alt}
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
