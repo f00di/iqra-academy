@@ -10,7 +10,7 @@ import { activities, benefits, getMainPricingPlans, programs } from "@/lib/data"
 import { createWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: { absolute: "Iqra Angels Learning Academy" },
   description:
     "Explore Iqra Angels Learning Academy programs, fees, activities, and enrollment options for academic session 2026."
 };
